@@ -21,10 +21,7 @@ body {
     border-radius: 18px;
     padding: 28px;
     margin-bottom: 30px;
-
-    box-shadow:
-        0 12px 30px rgba(37, 99, 235, 0.15),
-        0 4px 12px rgba(30, 64, 175, 0.08);
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.15);
 }
 
 .header-card {
@@ -32,12 +29,10 @@ body {
 }
 
 header h1 {
-    font-size: 2.6rem;
-    color: #1e3a8a;
+    font-size: 2.5rem;
 }
 
 header p {
-    margin-top: 6px;
     color: #475569;
 }
 
@@ -46,7 +41,7 @@ header p {
     align-items: center;
     gap: 12px;
     width: 100%;
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     font-weight: 600;
     color: #1e40af;
     background: none;
@@ -54,79 +49,46 @@ header p {
     cursor: pointer;
 }
 
+/* SIMPLE FIX: NO HEIGHT LIMIT */
 .panel {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease;
-    margin-top: 20px;
+    display: none;
+    margin-top: 15px;
 }
 
+/* TEXT */
 p {
-    margin-bottom: 14px;
-    line-height: 1.7;
-    text-align: justify;
-    color: #334155;
-}
-
-.subheading {
-    margin-top: 18px;
-    font-weight: 600;
-    color: #1e3a8a;
-}
-
-ul {
-    margin-left: 22px;
     margin-bottom: 12px;
+    line-height: 1.6;
 }
 
-li {
-    margin-bottom: 8px;
+/* LIST */
+ul {
+    margin-left: 20px;
+    margin-bottom: 10px;
 }
 
+/* PROJECT ITEMS */
 .project-item {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-
     background: #dbeafe;
-    padding: 18px;
-    margin-top: 18px;
-
-    border-radius: 12px;
+    padding: 15px;
+    margin-top: 15px;
+    border-radius: 10px;
     cursor: pointer;
-    font-size: 1.08rem;
-
-    transition: 0.2s;
 }
 
-.project-item:hover {
-    background: #bfdbfe;
-    transform: translateX(4px);
-}
-
+/* PROJECT CONTENT */
 .project-content {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease;
-
+    display: none;
     margin-top: 10px;
-    padding: 16px;
-
+    padding: 15px;
     border-left: 4px solid #2563eb;
     background: #f8fafc;
-    border-radius: 8px;
+    border-radius: 6px;
 }
 
+/* ICONS */
 i {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     color: #2563eb;
-}
-
-a {
-    color: #2563eb;
-}
-
-a:hover {
-    text-decoration: underline;
 }
