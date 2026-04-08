@@ -27,10 +27,10 @@
     </button>
     <div class="panel">
         <p>
-            I am an undergraduate engineering student with a growing interest in problem-solving, software development, and building practical systems that address real-world challenges. My academic journey has helped me develop a strong foundation in programming, data structures, and analytical thinking.
+            I am an undergraduate engineering student with a growing interest in problem-solving, software development, and building practical systems that address real-world challenges.
         </p>
         <p>
-            I am particularly interested in areas such as algorithm design, computer vision, and system-level problem solving. I approach learning with curiosity and consistency, and I aim to build solutions that are both efficient and user-focused.
+            I am particularly interested in areas such as algorithm design, computer vision, and system-level problem solving.
         </p>
     </div>
 </div>
@@ -41,7 +41,6 @@
         <i data-lucide="cpu"></i> Skills
     </button>
     <div class="panel">
-
         <h3>Programming</h3>
         <ul>
             <li>C, Python, Java</li>
@@ -57,7 +56,6 @@
         <ul>
             <li>Git, VS Code</li>
         </ul>
-
     </div>
 </div>
 
@@ -69,72 +67,47 @@
 
     <div class="panel">
 
-        <!-- Project 1 -->
         <div class="project-item" onclick="toggleProject('p1')">
             <i data-lucide="activity"></i>
             Smart Sensor Synchronization System
         </div>
 
         <div id="p1" class="project-content">
-            <p><strong>Objective:</strong> Developing a software-based synchronization system that leverages smartphone sensors to align multi-source data points with high temporal accuracy.</p>
-            <p><strong>Role:</strong> Lead Developer / Researcher</p>
-            <p><strong>Technologies Used:</strong> Smartphone Sensors (Accelerometer, Gyroscope), Python, Signal Processing Techniques</p>
-
-            <p><strong>Key Contributions:</strong></p>
-            <ul>
-                <li>Redesigned a hardware-centric concept into a mobile-first solution</li>
-                <li>Implemented sensor fusion techniques</li>
-                <li>Developed timestamp alignment algorithms</li>
-                <li>Validated system using real-world datasets</li>
-            </ul>
-
-            <p><strong>Outcome:</strong> Built a scalable and cost-effective solution.</p>
+            <p><strong>Objective:</strong> Developing a software-based synchronization system.</p>
         </div>
 
-        <!-- Project 2 -->
         <div class="project-item" onclick="toggleProject('p2')">
             <i data-lucide="battery-charging"></i>
             EV Charger Interface & Technical Documentation
         </div>
 
         <div id="p2" class="project-content">
-            <p><strong>Objective:</strong> Designing a structured technical manual and interface framework for an Electric Vehicle (EV) charging system involving dual-controller architecture.</p>
-            <p><strong>Technologies Used:</strong> Designing a structured technical manual and interface framework for an Electric Vehicle (EV) charging system involving dual-controller architecture.</p>
+            <p><strong>Objective:</strong> Designing a structured EV system.</p>
+            <p><strong>Technologies Used:</strong> ESP32, STM32</p>
 
             <p><strong>Key Contributions:</strong></p>
             <ul>
-                <li>Analyzed communication flow between ESP32 and STM32 controllers in the charging system</li>
-                <li>Analyzed communication flow between ESP32 and STM32 controllers in the charging system</li>
-                <li>Documented system architecture, including power flow, control signals, and fail-safe mechanisms</li>
-                <li>Developed a user-oriented interface outline for monitoring charging status and system diagnostics<li></li>
+                <li>Analyzed communication flow</li>
+                <li>Documented system architecture</li>
+                <li>Developed interface outline</li>
             </ul>
-            <p><strong>Outcome:</strong> Produced a comprehensive integration manual that improves system understanding, reduces onboarding time for new developers, and ensures reliable implementation of the EV charging setup.</p>
+
+            <p><strong>Outcome:</strong> Improved system documentation.</p>
         </div>
 
-        <!-- Project 3 -->
         <div class="project-item" onclick="toggleProject('p3')">
             <i data-lucide="bar-chart-3"></i>
             AI/ML Dashboard
         </div>
 
         <div id="p3" class="project-content">
-            <p><strong>Objective:</strong> Developing a responsive and user-friendly dashboard to present machine learning outputs in an interpretable and accessible format.</p>
-            <p><strong>Technologies Used:</strong> React, JavaScript, REST APIs</p>
-
-            <p><strong>Key Contributions:</strong></p>
-            <ul>
-                <li>Developing a responsive and user-friendly dashboard to present machine learning outputs in an interpretable and accessible format.</li>
-                <li>Integrated REST APIs to fetch and dynamically update data from backend ML models</li>
-                <li>Ensured responsive design for usability across devices</li>
-                <li>Focused on clean data visualization to simplify complex outputs for non-technical users</li>
-            </ul>
-            <p><strong>Outcome:</strong> Delivered a functional front-end module that enhances usability of AI/ML systems by translating technical outputs into clear, visual insights for end-users.</p>
+            <p><strong>Objective:</strong> Developing ML dashboard.</p>
         </div>
 
     </div>
 </div>
 
-<!-- ✅ RESUME (FIXED POSITION) -->
+<!-- RESUME -->
 <div class="card">
     <button class="accordion">
         <i data-lucide="file-text"></i> Resume
@@ -168,8 +141,26 @@
         <p><a href="https://linkedin.com">LinkedIn</a></p>
     </div>
 </div>
+
+<!-- ✅ PERSONAL STATEMENT (ADDED AT END) -->
+<div class="card" style="border-left: 6px solid #2563eb;">
+    <button class="accordion">
+        <i data-lucide="pen-line"></i> Personal Statement
+    </button>
+
+    <div class="panel">
+        <p>
+            I believe in learning by building. Each project I take up is an opportunity to understand not just how something works, but why it works that way. I value clarity, consistency, and continuous improvement in both technical and personal development.
+        </p>
+        <p>
+            I am currently focused on strengthening my fundamentals while gradually exploring advanced domains like machine learning and system design. I am open to collaborations, internships, and opportunities that allow me to grow as an engineer.
+        </p>
+    </div>
+</div>
+
+</div>
+
 <script>
-// Accordion toggle (simple + reliable)
 document.querySelectorAll(".accordion").forEach(btn => {
     btn.addEventListener("click", function () {
         const panel = this.nextElementSibling;
@@ -178,19 +169,7 @@ document.querySelectorAll(".accordion").forEach(btn => {
             panel.style.display === "block" ? "none" : "block";
     });
 });
-<div class="card">
-    <button class="accordion">
-        <i data-lucide="file-text"></i> Personal Statement
-    </button>
 
-    <div class="panel">
-        <p>I believe in learning by building. Each project I take up is an opportunity to understand not just how something works, but why it works that way. I value clarity, consistency, and continuous improvement in both technical and personal development.
-        I am currently focused on strengthening my fundamentals while gradually exploring advanced domains like machine learning and system design. I am open to collaborations, internships, and opportunities that allow me to grow as an engineer.
-        </p>
-    </div>
-</div>
-
-// Project toggle
 function toggleProject(id) {
     const el = document.getElementById(id);
 
@@ -198,7 +177,6 @@ function toggleProject(id) {
         el.style.display === "block" ? "none" : "block";
 }
 
-// Load icons
 lucide.createIcons();
 </script>
 
