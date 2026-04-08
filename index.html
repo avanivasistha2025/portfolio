@@ -25,171 +25,77 @@
 
     <!-- ABOUT -->
     <div class="card">
-        <button class="accordion">
-            <i data-lucide="user"></i> About Me
-        </button>
+        <button class="accordion"><i data-lucide="user"></i> About Me</button>
         <div class="panel">
-            <p>
-                I am an undergraduate engineering student with a growing interest in problem-solving, software development, and building practical systems that address real-world challenges. My academic journey has helped me develop a strong foundation in programming, data structures, and analytical thinking. Alongside coursework, I actively explore projects that push me to learn beyond the classroom and apply concepts in meaningful ways.
-            </p>
-            <p>
-                I am particularly interested in areas such as algorithm design, computer vision, and system-level problem solving. I approach learning with curiosity and consistency, and I aim to build solutions that are both efficient and user-focused.
-            </p>
+            <p>Your about content here...</p>
         </div>
     </div>
 
     <!-- SKILLS -->
     <div class="card">
-        <button class="accordion">
-            <i data-lucide="cpu"></i> Skills
-        </button>
+        <button class="accordion"><i data-lucide="cpu"></i> Skills</button>
         <div class="panel">
-
-            <h3>Programming</h3>
-            <ul>
-                <li>C, Python, Java</li>
-            </ul>
-
-            <h3>Core</h3>
-            <ul>
-                <li>Data Structures & Algorithms</li>
-                <li>Dynamic Programming</li>
-            </ul>
-
-            <h3>Tools</h3>
-            <ul>
-                <li>Git, VS Code</li>
-            </ul>
-
+            <p>Your skills content here...</p>
         </div>
     </div>
 
     <!-- PROJECTS -->
     <div class="card">
-        <button class="accordion">
-            <i data-lucide="folder"></i> Projects
-        </button>
+        <button class="accordion"><i data-lucide="folder"></i> Projects</button>
 
         <div class="panel">
 
-            <!-- Project 1 -->
-            <div class="project-item" onclick="toggleProject('p1')">
-                <i data-lucide="activity"></i>
-                Smart Sensor Synchronization System
+            <div class="project-item" data-target="p1">
+                <i data-lucide="activity"></i> Smart Sensor System
             </div>
-
             <div id="p1" class="project-content">
-                <p><strong>Objective:</strong> Developing a software-based synchronization system that leverages smartphone sensors to align multi-source data points with high temporal accuracy.</p>
-
-                <p><strong>Role:</strong> Lead Developer / Researcher</p>
-
-                <p><strong>Technologies Used:</strong> Smartphone Sensors (Accelerometer, Gyroscope), Python, Signal Processing Techniques</p>
-
-                <p><strong>Key Contributions:</strong></p>
-                <ul>
-                    <li>Redesigned a hardware-centric “Smart Seat” concept into a mobile-first solution</li>
-                    <li>Implemented sensor fusion techniques to improve motion and positional accuracy</li>
-                    <li>Developed timestamp alignment and noise reduction algorithms</li>
-                    <li>Conducted testing using real-world datasets to validate system consistency</li>
-                </ul>
-
-                <p><strong>Outcome:</strong> Demonstrated a scalable and cost-effective alternative to hardware-based systems, with applications in ergonomics, health monitoring, and activity tracking.</p>
+                <p>Project details here...</p>
             </div>
 
-            <!-- Project 2 -->
-            <div class="project-item" onclick="toggleProject('p2')">
-                <i data-lucide="battery-charging"></i>
-                EV Charger Interface & Technical Documentation
+            <div class="project-item" data-target="p2">
+                <i data-lucide="battery-charging"></i> EV Charger
             </div>
-
             <div id="p2" class="project-content">
-                <p><strong>Objective:</strong> Designing a structured technical manual and interface framework for an Electric Vehicle (EV) charging system involving dual-controller architecture.</p>
-
-                <p><strong>Technologies Used:</strong> ESP32, STM32, Embedded Systems Concepts, Technical Documentation Standards</p>
-
-                <p><strong>Key Contributions:</strong></p>
-                <ul>
-                    <li>Analyzed communication flow between ESP32 and STM32 controllers in the charging system</li>
-                    <li>Documented system architecture including power flow, control signals, and fail-safe mechanisms</li>
-                    <li>Developed a user-oriented interface outline for monitoring charging status and diagnostics</li>
-                    <li>Structured documentation to meet professional engineering standards for developers and operators</li>
-                </ul>
-
-                <p><strong>Outcome:</strong> Produced a comprehensive integration manual that improves system understanding, reduces onboarding time, and ensures reliable implementation of the EV charging setup.</p>
+                <p>Project details here...</p>
             </div>
 
-            <!-- Project 3 -->
-            <div class="project-item" onclick="toggleProject('p3')">
-                <i data-lucide="bar-chart-3"></i>
-                AI/ML Team Front-End Module
-            </div>
-
-            <div id="p3" class="project-content">
-                <p><strong>Objective:</strong> Developing a responsive and user-friendly dashboard to present machine learning outputs in an interpretable and accessible format.</p>
-
-                <p><strong>Technologies Used:</strong> React, JavaScript, REST APIs</p>
-
-                <p><strong>Key Contributions:</strong></p>
-                <ul>
-                    <li>Built modular UI components to display predictions, metrics, and model outputs</li>
-                    <li>Integrated REST APIs to fetch and dynamically update backend ML data</li>
-                    <li>Focused on clean data visualization for non-technical users</li>
-                    <li>Ensured responsive design for cross-device usability</li>
-                </ul>
-
-                <p><strong>Outcome:</strong> Delivered a functional dashboard that enhances usability of ML systems by translating technical outputs into clear, visual insights.</p>
-            </div>
-
-        </div>
-    </div>
-
-    <!-- CONTACT -->
-    <div class="card">
-        <button class="accordion">
-            <i data-lucide="mail"></i> Contact
-        </button>
-        <div class="panel">
-            <p>Email: avani.vasistha2025@vitvellore.ac.in</p>
-            <p><a href="https://github.com/avanivasistha2025">GitHub link</a></p>
-            <p><a href="https://linkedin.com">LinkedIn link</a></p>
         </div>
     </div>
 
 </div>
 
 <script>
-const accordions = document.querySelectorAll(".accordion");
+document.addEventListener("DOMContentLoaded", function () {
 
-accordions.forEach(btn => {
-    btn.addEventListener("click", () => {
-        const panel = btn.nextElementSibling;
+    // Accordion
+    document.querySelectorAll(".accordion").forEach(button => {
+        button.addEventListener("click", function () {
+            const panel = this.nextElementSibling;
 
-        // Close others (optional but cleaner)
-        document.querySelectorAll(".panel").forEach(p => {
-            if (p !== panel) {
-                p.style.maxHeight = null;
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
             }
         });
-
-        if (panel.style.maxHeight) {
-            panel.style.maxHeight = null;
-        } else {
-            panel.style.maxHeight = panel.scrollHeight + "px";
-        }
     });
+
+    // Project toggles
+    document.querySelectorAll(".project-item").forEach(item => {
+        item.addEventListener("click", function () {
+            const target = document.getElementById(this.dataset.target);
+
+            if (target.style.maxHeight) {
+                target.style.maxHeight = null;
+            } else {
+                target.style.maxHeight = target.scrollHeight + "px";
+            }
+        });
+    });
+
+    // Icons
+    lucide.createIcons();
 });
-
-function toggleProject(id) {
-    const el = document.getElementById(id);
-
-    if (el.style.maxHeight) {
-        el.style.maxHeight = null;
-    } else {
-        el.style.maxHeight = el.scrollHeight + "px";
-    }
-}
-
-lucide.createIcons();
 </script>
 
 </body>
