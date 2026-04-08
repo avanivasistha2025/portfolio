@@ -15,9 +15,18 @@
 
 <div class="container">
 
+<!-- ✅ NAVBAR (ADDED) -->
+<nav class="nav">
+    <a href="#">About</a>
+    <a href="#">Skills</a>
+    <a href="#">Projects</a>
+    <a href="#">Resume</a>
+    <a href="#">Contact</a>
+</nav>
+
 <header class="card header-card">
     <h1>Avani Vasistha</h1>
-    <p>Engineering Student | Developer</p>
+    <p>Engineering Student | Developer | Problem Solver</p>
 </header>
 
 <!-- ABOUT -->
@@ -89,6 +98,10 @@
             </ul>
 
             <p><strong>Outcome:</strong> Built a scalable and cost-effective solution.</p>
+
+            <!-- ✅ ADDED -->
+            <p><strong>Learning Outcome:</strong> Gained practical exposure to sensor data processing and system design.</p>
+            <p><strong>Project Link:</strong> <a href="#">GitHub Repo</a></p>
         </div>
 
         <!-- Project 2 -->
@@ -109,6 +122,10 @@
                 <li>Developed a user-oriented interface outline for monitoring charging status and system diagnostics</li>
             </ul>
             <p><strong>Outcome:</strong> Produced a comprehensive integration manual that improves system understanding, reduces onboarding time for new developers, and ensures reliable implementation of the EV charging setup.</p>
+
+            <!-- ✅ ADDED -->
+            <p><strong>Learning Outcome:</strong> Strengthened technical documentation and embedded systems understanding.</p>
+            <p><strong>Project Link:</strong> <a href="#">GitHub Repo</a></p>
         </div>
 
         <!-- Project 3 -->
@@ -129,6 +146,10 @@
                 <li>Focused on clean data visualization to simplify complex outputs for non-technical users</li>
             </ul>
             <p><strong>Outcome:</strong> Delivered a functional front-end module that enhances usability of AI/ML systems by translating technical outputs into clear, visual insights for end-users.</p>
+
+            <!-- ✅ ADDED -->
+            <p><strong>Learning Outcome:</strong> Improved frontend development and API integration skills.</p>
+            <p><strong>Project Link:</strong> <a href="#">GitHub Repo</a></p>
         </div>
 
     </div>
@@ -169,7 +190,7 @@
     </div>
 </div>
 
-<!-- PERSONAL STATEMENT (ADDED AT END, CONTENT UNCHANGED) -->
+<!-- PERSONAL STATEMENT -->
 <div class="card" style="border-left: 6px solid #2563eb;">
     <button class="accordion">
         <i data-lucide="pen-line"></i> Personal Statement
@@ -191,17 +212,13 @@
 document.querySelectorAll(".accordion").forEach(btn => {
     btn.addEventListener("click", function () {
         const panel = this.nextElementSibling;
-
-        panel.style.display =
-            panel.style.display === "block" ? "none" : "block";
+        panel.style.display = panel.style.display === "block" ? "none" : "block";
     });
 });
 
 function toggleProject(id) {
     const el = document.getElementById(id);
-
-    el.style.display =
-        el.style.display === "block" ? "none" : "block";
+    el.style.display = el.style.display === "block" ? "none" : "block";
 }
 
 lucide.createIcons();
