@@ -163,13 +163,30 @@ const accordions = document.querySelectorAll(".accordion");
 accordions.forEach(btn => {
     btn.addEventListener("click", () => {
         const panel = btn.nextElementSibling;
-        panel.classList.toggle("open");
+
+        // Close others (optional but cleaner)
+        document.querySelectorAll(".panel").forEach(p => {
+            if (p !== panel) {
+                p.style.maxHeight = null;
+            }
+        });
+
+        if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+        } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+        }
     });
 });
 
 function toggleProject(id) {
     const el = document.getElementById(id);
-    el.classList.toggle("open");
+
+    if (el.style.maxHeight) {
+        el.style.maxHeight = null;
+    } else {
+        el.style.maxHeight = el.scrollHeight + "px";
+    }
 }
 
 lucide.createIcons();
