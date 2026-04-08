@@ -1,118 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <title>My Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avani Vasistha | Portfolio</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <header>
+<div class="container">
+
+    <header class="card">
         <h1>Avani Vasistha</h1>
         <p>Engineering Student | Developer</p>
     </header>
 
-    <section>
-        <h2>About Me</h2>
-        <p>I am an undergraduate engineering student with a growing interest in problem-solving, software development,
-            and building practical systems that address real-world challenges. My academic journey has helped me develop
-            a strong foundation in programming, data structures, and analytical thinking. Alongside coursework, I
-            actively explore projects that push me to learn beyond the classroom and apply concepts in meaningful ways.
+    <!-- ABOUT -->
+    <div class="card">
+        <button class="accordion">About Me</button>
+        <div class="panel">
+            <p>
+                I am an undergraduate engineering student with a strong interest in
+                problem-solving, software development, and building practical systems.
+            </p>
+            <p>
+                My focus areas include algorithm design, computer vision, and system-level problem solving.
+            </p>
+        </div>
+    </div>
 
-            I am particularly interested in areas such as algorithm design, computer vision, and system-level problem
-            solving. I approach learning with curiosity and consistency, and I aim to build solutions that are both
-            efficient and user-focused.</p>
-    </section>
+    <!-- SKILLS -->
+    <div class="card">
+        <button class="accordion">Skills</button>
+        <div class="panel">
 
-    <section>
-    <h2>Skills</h2>
+            <h3>Programming</h3>
+            <ul>
+                <li>C, Python, Java</li>
+            </ul>
 
-    <h3>Programming</h3>
-    <ul>
-        <li>C</li>
-        <li>Python</li>
-        <li>Java (basic)</li>
-    </ul>
+            <h3>Core</h3>
+            <ul>
+                <li>Data Structures & Algorithms</li>
+                <li>Dynamic Programming</li>
+            </ul>
 
-    <h3>Core Concepts</h3>
-    <ul>
-        <li>Data Structures & Algorithms</li>
-        <li>Dynamic Programming</li>
-        <li>Problem Solving</li>
-    </ul>
+            <h3>Tools</h3>
+            <ul>
+                <li>Git, VS Code</li>
+            </ul>
 
-    <h3>Tools & Technologies</h3>
-    <ul>
-        <li>Git & GitHub</li>
-        <li>VS Code</li>
-    </ul>
-</section>
+        </div>
+    </div>
 
-    <section>
-    <h2>Projects</h2>
+    <!-- PROJECTS -->
+    <div class="card">
+        <button class="accordion">Projects</button>
+        <div class="panel">
 
-    <h3>Smart Sensor Synchronization System (In Progress)</h3>
-    <p>
-        Developing a software-based synchronization system that utilizes 
-        smartphone sensors such as accelerometer and gyroscope to align 
-        multi-source data points with improved temporal accuracy.
-    </p>
-    <ul>
-        <li>Redesigned a hardware-based concept into a mobile-first solution</li>
-        <li>Implemented basic sensor fusion and noise filtering techniques</li>
-        <li>Worked on timestamp alignment across sensor streams</li>
-        <li>Explored real-world applications in activity tracking and monitoring</li>
-    </ul>
+            <div class="project-item" onclick="toggleProject('p1')">Smart Sensor System</div>
+            <div id="p1" class="project-content">
+                <p>Smartphone-based sensor synchronization system for accurate data alignment.</p>
+            </div>
 
-    <h3>EV Charger Interface & Technical Documentation</h3>
-    <p>
-        Created structured technical documentation and interface design 
-        for an EV charging system using dual-controller architecture 
-        (ESP32 and STM32).
-    </p>
-    <ul>
-        <li>Documented communication flow between controllers</li>
-        <li>Outlined system architecture and safety mechanisms</li>
-        <li>Designed user-oriented interface concepts</li>
-        <li>Followed professional documentation standards</li>
-    </ul>
+            <div class="project-item" onclick="toggleProject('p2')">EV Charger Interface</div>
+            <div id="p2" class="project-content">
+                <p>Technical documentation and architecture for ESP32–STM32 EV system.</p>
+            </div>
 
-    <h3>AI/ML Front-End Dashboard</h3>
-    <p>
-        Developed a responsive front-end module to visualize machine learning 
-        outputs in a clear and user-friendly format.
-    </p>
-    <ul>
-        <li>Built UI components using React</li>
-        <li>Integrated REST APIs for dynamic data</li>
-        <li>Focused on clean and readable data visualization</li>
-        <li>Improved accessibility of ML outputs for users</li>
-    </ul>
+            <div class="project-item" onclick="toggleProject('p3')">AI/ML Dashboard</div>
+            <div id="p3" class="project-content">
+                <p>React-based dashboard for visualizing machine learning outputs.</p>
+            </div>
 
-</section>
-<section>
-    <h2>Resume</h2>
-    <p>
-        Bachelor of Engineering (Your Branch)
-    </p>
-    <p>
-        Relevant Coursework: Data Structures, Algorithms, Programming in C,
-        Object-Oriented Programming
-    </p>
-    <p>
-        Full resume available upon request.
-    </p>
-</section>
+        </div>
+    </div>
 
-    <section>
-    <h2>Contact</h2>
-    <p>Email: your@email.com</p>
-    <p>GitHub: https://github.com/yourusername</p>
-    <p>LinkedIn: https://linkedin.com/in/yourprofile</p>
-</section>
+    <!-- CONTACT -->
+    <div class="card">
+        <button class="accordion">Contact</button>
+        <div class="panel">
+            <p>Email: avani.vasistha2025@vitvellore.ac.in</p>
+            <p><a href="https://github.com/avanivasistha2025">GitHub</a></p>
+            <p><a href="https://linkedin.com">LinkedIn</a></p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+    // Accordion
+    const acc = document.querySelectorAll(".accordion");
+    acc.forEach(btn => {
+        btn.addEventListener("click", function () {
+            this.classList.toggle("active");
+            const panel = this.nextElementSibling;
+            panel.style.display = panel.style.display === "block" ? "none" : "block";
+        });
+    });
+
+    // Project toggle
+    function toggleProject(id) {
+        const el = document.getElementById(id);
+        el.style.display = el.style.display === "block" ? "none" : "block";
+    }
+</script>
 
 </body>
-
 </html>
