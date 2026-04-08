@@ -168,30 +168,6 @@
         <p><a href="https://linkedin.com">LinkedIn</a></p>
     </div>
 </div>
-
-</div>
-<div class="card">
-    <button class="accordion">
-        <i data-lucide="file-text"></i> Resume
-    </button>
-
-    <div class="panel">
-        <p><strong>Degree:</strong> B.Tech in Computer Science</p>
-        <p><strong>Institution:</strong> VIT Vellore</p>
-
-        <p><strong>Relevant Coursework:</strong></p>
-        <ul>
-            <li>Data Structures & Algorithms</li>
-            <li>Object-Oriented Programming</li>
-            <li>Programming in C</li>
-        </ul>
-
-        <p>
-            <a href="#">Download Full Resume (PDF)</a>
-        </p>
-    </div>
-</div>
-
 <script>
 // Accordion toggle (simple + reliable)
 document.querySelectorAll(".accordion").forEach(btn => {
@@ -202,6 +178,17 @@ document.querySelectorAll(".accordion").forEach(btn => {
             panel.style.display === "block" ? "none" : "block";
     });
 });
+<div class="card">
+    <button class="accordion">
+        <i data-lucide="file-text"></i> Personal Statement
+    </button>
+
+    <div class="panel">
+        <p>I believe in learning by building. Each project I take up is an opportunity to understand not just how something works, but why it works that way. I value clarity, consistency, and continuous improvement in both technical and personal development.
+        I am currently focused on strengthening my fundamentals while gradually exploring advanced domains like machine learning and system design. I am open to collaborations, internships, and opportunities that allow me to grow as an engineer.
+        </p>
+    </div>
+</div>
 
 // Project toggle
 function toggleProject(id) {
