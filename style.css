@@ -117,3 +117,8 @@ a {
 a:hover {
     text-decoration: underline;
 }
+.project-content {
+    border-left: 3px solid #1f3a5f;
+    padding-left: 12px;
+    margin-top: 8px;
+}
