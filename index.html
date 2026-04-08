@@ -138,20 +138,30 @@
 </div>
 
 <script>
-    // Accordion
-    const acc = document.querySelectorAll(".accordion");
-    acc.forEach(btn => {
-        btn.addEventListener("click", function () {
-            this.classList.toggle("active");
-            const panel = this.nextElementSibling;
-            panel.style.display = panel.style.display === "block" ? "none" : "block";
+    // Accordion toggle
+    const accordions = document.querySelectorAll(".accordion");
+
+    accordions.forEach(button => {
+        button.addEventListener("click", () => {
+            const panel = button.nextElementSibling;
+
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
         });
     });
 
     // Project toggle
     function toggleProject(id) {
         const el = document.getElementById(id);
-        el.style.display = el.style.display === "block" ? "none" : "block";
+
+        if (el.style.display === "block") {
+            el.style.display = "none";
+        } else {
+            el.style.display = "block";
+        }
     }
 </script>
 
