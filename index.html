@@ -5,10 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avani Vasistha | Portfolio</title>
 
-    <!-- Font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-
-    <!-- Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <link rel="stylesheet" href="style.css">
@@ -18,82 +15,135 @@
 
 <div class="container">
 
-    <header class="card header-card">
-        <h1>Avani Vasistha</h1>
-        <p>Engineering Student | Developer</p>
-    </header>
+<header class="card header-card">
+    <h1>Avani Vasistha</h1>
+    <p>Engineering Student | Developer</p>
+</header>
 
-    <!-- ABOUT -->
-    <div class="card">
-        <button class="accordion"><i data-lucide="user"></i> About Me</button>
-        <div class="panel">
-            <p>Your about content here...</p>
-        </div>
+<!-- ABOUT -->
+<div class="card">
+    <button class="accordion"><i data-lucide="user"></i> About Me</button>
+    <div class="panel">
+        <p>
+            I am an undergraduate engineering student with a growing interest in problem-solving, software development, and building practical systems that address real-world challenges. My academic journey has helped me develop a strong foundation in programming, data structures, and analytical thinking. Alongside coursework, I actively explore projects that push me to learn beyond the classroom and apply concepts in meaningful ways.
+        </p>
+        <p>
+            I am particularly interested in areas such as algorithm design, computer vision, and system-level problem solving. I approach learning with curiosity and consistency, and I aim to build solutions that are both efficient and user-focused.
+        </p>
     </div>
+</div>
 
-    <!-- SKILLS -->
-    <div class="card">
-        <button class="accordion"><i data-lucide="cpu"></i> Skills</button>
-        <div class="panel">
-            <p>Your skills content here...</p>
-        </div>
+<!-- SKILLS -->
+<div class="card">
+    <button class="accordion"><i data-lucide="cpu"></i> Skills</button>
+    <div class="panel">
+        <h3>Programming</h3>
+        <ul><li>C, Python, Java</li></ul>
+
+        <h3>Core</h3>
+        <ul>
+            <li>Data Structures & Algorithms</li>
+            <li>Dynamic Programming</li>
+        </ul>
+
+        <h3>Tools</h3>
+        <ul><li>Git, VS Code</li></ul>
     </div>
+</div>
 
-    <!-- PROJECTS -->
-    <div class="card">
-        <button class="accordion"><i data-lucide="folder"></i> Projects</button>
+<!-- PROJECTS -->
+<div class="card">
+    <button class="accordion"><i data-lucide="folder"></i> Projects</button>
+    <div class="panel">
 
-        <div class="panel">
-
-            <div class="project-item" data-target="p1">
-                <i data-lucide="activity"></i> Smart Sensor System
-            </div>
-            <div id="p1" class="project-content">
-                <p>Project details here...</p>
-            </div>
-
-            <div class="project-item" data-target="p2">
-                <i data-lucide="battery-charging"></i> EV Charger
-            </div>
-            <div id="p2" class="project-content">
-                <p>Project details here...</p>
-            </div>
-
+        <div class="project-item" data-target="p1">
+            <i data-lucide="activity"></i>
+            Smart Sensor Synchronization System
         </div>
+        <div id="p1" class="project-content">
+            <p><strong>Objective:</strong> Developing a software-based synchronization system that leverages smartphone sensors to align multi-source data points with high temporal accuracy.</p>
+            <p><strong>Role:</strong> Lead Developer / Researcher</p>
+            <p><strong>Technologies Used:</strong> Smartphone Sensors (Accelerometer, Gyroscope), Python, Signal Processing Techniques</p>
+
+            <p><strong>Key Contributions:</strong></p>
+            <ul>
+                <li>Redesigned a hardware-centric “Smart Seat” concept into a mobile-first solution</li>
+                <li>Implemented sensor fusion techniques to improve motion and positional accuracy</li>
+                <li>Developed timestamp alignment and noise reduction algorithms</li>
+                <li>Conducted testing using real-world datasets to validate system consistency</li>
+            </ul>
+
+            <p><strong>Outcome:</strong> Demonstrated a scalable and cost-effective alternative to hardware-based systems.</p>
+        </div>
+
+        <div class="project-item" data-target="p2">
+            <i data-lucide="battery-charging"></i>
+            EV Charger Interface & Technical Documentation
+        </div>
+        <div id="p2" class="project-content">
+            <p><strong>Objective:</strong> Designing a structured technical manual for EV systems.</p>
+            <p><strong>Technologies Used:</strong> ESP32, STM32</p>
+
+            <ul>
+                <li>Analyzed communication flow</li>
+                <li>Documented architecture and safety systems</li>
+                <li>Designed interface structure</li>
+            </ul>
+        </div>
+
+        <div class="project-item" data-target="p3">
+            <i data-lucide="bar-chart-3"></i>
+            AI/ML Team Front-End Module
+        </div>
+        <div id="p3" class="project-content">
+            <p><strong>Objective:</strong> Building a dashboard for ML outputs.</p>
+            <p><strong>Technologies Used:</strong> React, REST APIs</p>
+
+            <ul>
+                <li>Built UI components</li>
+                <li>Integrated backend APIs</li>
+                <li>Focused on data visualization</li>
+            </ul>
+        </div>
+
     </div>
+</div>
+
+<!-- CONTACT -->
+<div class="card">
+    <button class="accordion"><i data-lucide="mail"></i> Contact</button>
+    <div class="panel">
+        <p>Email: avani.vasistha2025@vitvellore.ac.in</p>
+        <p><a href="https://github.com/avanivasistha2025">GitHub link</a></p>
+        <p><a href="https://linkedin.com">LinkedIn link</a></p>
+    </div>
+</div>
 
 </div>
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
-    // Accordion
-    document.querySelectorAll(".accordion").forEach(button => {
-        button.addEventListener("click", function () {
+    document.querySelectorAll(".accordion").forEach(btn => {
+        btn.addEventListener("click", function () {
             const panel = this.nextElementSibling;
 
-            if (panel.style.maxHeight) {
-                panel.style.maxHeight = null;
-            } else {
-                panel.style.maxHeight = panel.scrollHeight + "px";
-            }
+            panel.style.maxHeight = panel.style.maxHeight
+                ? null
+                : panel.scrollHeight + "px";
         });
     });
 
-    // Project toggles
     document.querySelectorAll(".project-item").forEach(item => {
         item.addEventListener("click", function () {
             const target = document.getElementById(this.dataset.target);
 
-            if (target.style.maxHeight) {
-                target.style.maxHeight = null;
-            } else {
-                target.style.maxHeight = target.scrollHeight + "px";
-            }
+            target.style.maxHeight = target.style.maxHeight
+                ? null
+                : target.scrollHeight + "px";
         });
     });
 
-    // Icons
     lucide.createIcons();
 });
 </script>
