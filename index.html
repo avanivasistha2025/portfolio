@@ -173,14 +173,13 @@
 document.querySelectorAll(".accordion").forEach(btn => {
     btn.addEventListener("click", function () {
         const panel = this.nextElementSibling;
-
-        panel.classList.toggle("open");
+        panel.style.display = panel.style.display === "block" ? "none" : "block";
     });
 });
 
 function toggleProject(id) {
     const el = document.getElementById(id);
-    el.classList.toggle("open");
+    el.style.display = el.style.display === "block" ? "none" : "block";
 }
 
 lucide.createIcons();
