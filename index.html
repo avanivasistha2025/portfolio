@@ -13,7 +13,7 @@
 
 <body>
 
-<div class="overlay"></div>
+<div class="bg"></div>
 
 <div class="container">
 
@@ -43,8 +43,11 @@
 <div class="card">
     <button class="accordion"><i data-lucide="cpu"></i> Skills</button>
     <div class="panel">
+
         <h3>Programming</h3>
-        <ul><li>C, Python, Java</li></ul>
+        <ul>
+            <li>C, Python, Java</li>
+        </ul>
 
         <h3>Core Concepts</h3>
         <ul>
@@ -53,18 +56,24 @@
         </ul>
 
         <h3>Tools & Technologies</h3>
-        <ul><li>Git, VS Code</li></ul>
+        <ul>
+            <li>Git, VS Code</li>
+        </ul>
+
     </div>
 </div>
 
 <!-- PROJECTS -->
 <div class="card">
     <button class="accordion"><i data-lucide="folder"></i> Projects</button>
+
     <div class="panel">
 
         <div class="project-item" onclick="toggleProject('p1')">
-            <i data-lucide="activity"></i> Smart Sensor Synchronization System
+            <i data-lucide="activity"></i>
+            Smart Sensor Synchronization System
         </div>
+
         <div id="p1" class="project-content">
             <p><strong>Objective:</strong> Developing a software-based synchronization system that leverages smartphone sensors to align multi-source data points with high temporal accuracy.</p>
             <p><strong>Role:</strong> Lead Developer / Researcher</p>
@@ -84,8 +93,10 @@
         </div>
 
         <div class="project-item" onclick="toggleProject('p2')">
-            <i data-lucide="battery-charging"></i> EV Charger Interface & Technical Documentation
+            <i data-lucide="battery-charging"></i>
+            EV Charger Interface & Technical Documentation
         </div>
+
         <div id="p2" class="project-content">
             <p><strong>Objective:</strong> Designing a structured technical manual and interface framework for an Electric Vehicle (EV) charging system involving dual-controller architecture.</p>
             <p><strong>Technologies Used:</strong> Designing a structured technical manual and interface framework for an Electric Vehicle (EV) charging system involving dual-controller architecture.</p>
@@ -104,8 +115,10 @@
         </div>
 
         <div class="project-item" onclick="toggleProject('p3')">
-            <i data-lucide="bar-chart-3"></i> AI/ML Dashboard
+            <i data-lucide="bar-chart-3"></i>
+            AI/ML Dashboard
         </div>
+
         <div id="p3" class="project-content">
             <p><strong>Objective:</strong> Developing a responsive and user-friendly dashboard to present machine learning outputs in an interpretable and accessible format.</p>
             <p><strong>Technologies Used:</strong> React, JavaScript, REST APIs</p>
