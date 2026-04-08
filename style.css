@@ -1,8 +1,7 @@
-/* NAVBAR */
 .nav {
     display: flex;
     gap: 20px;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .nav a {
@@ -11,7 +10,6 @@
     font-weight: 500;
 }
 
-/* HOVER IMPROVEMENT */
 .project-item:hover {
     transform: scale(1.02);
 }
