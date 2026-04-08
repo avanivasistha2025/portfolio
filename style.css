@@ -4,9 +4,13 @@
     box-sizing: border-box;
 }
 
-html, body {
-    overflow-x: hidden;
+html {
+    scroll-behavior: smooth;
+}
+
+body {
     font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
 }
 
 /* BACKGROUND */
@@ -43,6 +47,11 @@ html, body {
 .nav a {
     color: #93c5fd;
     text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: #60a5fa;
 }
 
 /* CARD */
@@ -51,7 +60,18 @@ html, body {
     border-radius: 16px;
     padding: 25px;
     margin-bottom: 25px;
+
     box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    
+    transition: all 0.35s ease;
+    animation: fadeUp 0.6s ease forwards;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow:
+        0 20px 40px rgba(0,0,0,0.5),
+        0 0 20px rgba(59,130,246,0.3);
 }
 
 /* HEADER */
@@ -78,9 +98,15 @@ header p {
     align-items: center;
 }
 
-/* PANEL */
+/* PANEL ANIMATION */
 .panel {
-    display: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.panel.open {
+    max-height: 1000px;
     margin-top: 12px;
 }
 
@@ -88,6 +114,7 @@ header p {
 p {
     color: #e2e8f0;
     margin-bottom: 10px;
+    line-height: 1.6;
 }
 
 /* SUBHEADINGS */
@@ -105,7 +132,7 @@ li {
     color: #cbd5f5;
 }
 
-/* PROJECT */
+/* PROJECT ITEM */
 .project-item {
     background: rgba(59,130,246,0.2);
     padding: 12px;
@@ -113,16 +140,52 @@ li {
     border-radius: 10px;
     cursor: pointer;
     color: white;
+
+    transition: all 0.3s ease;
 }
 
+.project-item:hover {
+    background: rgba(59,130,246,0.35);
+    transform: scale(1.02);
+}
+
+/* PROJECT CONTENT */
 .project-content {
-    display: none;
-    padding: 10px;
-    margin-top: 5px;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+    padding-left: 10px;
     border-left: 3px solid #3b82f6;
+}
+
+.project-content.open {
+    max-height: 1000px;
+    margin-top: 10px;
 }
 
 /* LINKS */
 a {
     color: #93c5fd;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ICON */
+i {
+    width: 18px;
+    height: 18px;
+}
+
+/* ENTRY ANIMATION */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
