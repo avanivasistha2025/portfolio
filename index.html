@@ -28,7 +28,7 @@
             I am an undergraduate engineering student with a growing interest in problem-solving, software development, and building practical systems that address real-world challenges. My academic journey has helped me develop a strong foundation in programming, data structures, and analytical thinking.
         </p>
         <p>
-            I am particularly interested in areas such as algorithm design, computer vision, and system-level problem solving. I approach learning with curiosity and consistency, and I aim to build solutions that are both efficient and user-focused.
+            I am particularly interested in algorithm design, computer vision, and system-level problem solving. I approach learning with curiosity and consistency, and I aim to build efficient and user-focused solutions.
         </p>
     </div>
 </div>
@@ -37,17 +37,19 @@
 <div class="card">
     <button class="accordion"><i data-lucide="cpu"></i> Skills</button>
     <div class="panel">
+
         <h3>Programming</h3>
         <ul><li>C, Python, Java</li></ul>
 
-        <h3>Core</h3>
+        <h3>Core Concepts</h3>
         <ul>
             <li>Data Structures & Algorithms</li>
             <li>Dynamic Programming</li>
         </ul>
 
-        <h3>Tools</h3>
+        <h3>Tools & Technologies</h3>
         <ul><li>Git, VS Code</li></ul>
+
     </div>
 </div>
 
@@ -57,58 +59,60 @@
 
     <div class="panel">
 
+        <!-- Project 1 -->
         <div class="project-item" data-target="p1">
             <i data-lucide="activity"></i>
             Smart Sensor Synchronization System
         </div>
 
         <div id="p1" class="project-content">
-            <p><strong>Objective:</strong> Developing a software-based synchronization system that leverages smartphone sensors to align multi-source data points with high temporal accuracy.</p>
+            <p><strong>Objective:</strong> Developing a software-based synchronization system using smartphone sensors.</p>
             <p><strong>Role:</strong> Lead Developer / Researcher</p>
-            <p><strong>Technologies Used:</strong> Smartphone Sensors (Accelerometer, Gyroscope), Python, Signal Processing Techniques</p>
+            <p><strong>Technologies:</strong> Sensors, Python, Signal Processing</p>
 
             <p class="subheading">Key Contributions:</p>
             <ul>
-                <li>Redesigned a hardware-centric concept into a mobile-first solution</li>
-                <li>Implemented sensor fusion techniques</li>
-                <li>Developed timestamp alignment algorithms</li>
-                <li>Validated system with real-world datasets</li>
+                <li>Redesigned system architecture</li>
+                <li>Implemented sensor fusion</li>
+                <li>Developed alignment algorithms</li>
             </ul>
 
-            <p><strong>Outcome:</strong> Demonstrated a scalable alternative to hardware-based systems.</p>
+            <p><strong>Outcome:</strong> Built a scalable and cost-effective solution.</p>
         </div>
 
+        <!-- Project 2 -->
         <div class="project-item" data-target="p2">
             <i data-lucide="battery-charging"></i>
-            EV Charger Interface & Technical Documentation
+            EV Charger Interface & Documentation
         </div>
 
         <div id="p2" class="project-content">
-            <p><strong>Objective:</strong> Designing a structured manual for EV systems.</p>
-            <p><strong>Technologies Used:</strong> ESP32, STM32</p>
+            <p><strong>Objective:</strong> Designing structured EV system documentation.</p>
+            <p><strong>Technologies:</strong> ESP32, STM32</p>
 
             <p class="subheading">Key Contributions:</p>
             <ul>
                 <li>Analyzed controller communication</li>
-                <li>Documented architecture and safety</li>
-                <li>Designed interface structure</li>
+                <li>Documented system architecture</li>
+                <li>Designed user interface flow</li>
             </ul>
         </div>
 
+        <!-- Project 3 -->
         <div class="project-item" data-target="p3">
             <i data-lucide="bar-chart-3"></i>
-            AI/ML Team Front-End Module
+            AI/ML Dashboard
         </div>
 
         <div id="p3" class="project-content">
             <p><strong>Objective:</strong> Building a dashboard for ML outputs.</p>
-            <p><strong>Technologies Used:</strong> React, REST APIs</p>
+            <p><strong>Technologies:</strong> React, APIs</p>
 
             <p class="subheading">Key Contributions:</p>
             <ul>
-                <li>Built modular UI components</li>
-                <li>Integrated backend APIs</li>
-                <li>Focused on visualization</li>
+                <li>Developed UI components</li>
+                <li>Integrated APIs</li>
+                <li>Improved visualization</li>
             </ul>
         </div>
 
@@ -147,6 +151,11 @@ document.addEventListener("DOMContentLoaded", function () {
             target.style.maxHeight = target.style.maxHeight
                 ? null
                 : target.scrollHeight + "px";
+
+            setTimeout(() => {
+                const parent = this.closest(".panel");
+                parent.style.maxHeight = parent.scrollHeight + "px";
+            }, 50);
         });
     });
 
