@@ -52,6 +52,7 @@
 <div class="card">
 <button class="accordion"><i data-lucide="cpu"></i> Skills</button>
 <div class="panel">
+
 <h3>Programming</h3>
 <ul><li>C, Python, Java</li></ul>
 
@@ -63,6 +64,7 @@
 
 <h3>Tools & Technologies</h3>
 <ul><li>Git, VS Code</li></ul>
+
 </div>
 </div>
 
@@ -75,22 +77,45 @@
 <div class="project-item" onclick="toggleProject('p1')">
 <i data-lucide="activity"></i> Smart Sensor Synchronization System
 </div>
+
 <div id="p1" class="project-content">
-<p><strong>Objective:</strong> Developing a software-based synchronization system...</p>
+<p><strong>Objective:</strong> Developing a software-based synchronization system that leverages smartphone sensors to align multi-source data points with high temporal accuracy.</p>
+<p><strong>Role:</strong> Lead Developer / Researcher</p>
+<p><strong>Technologies Used:</strong> Smartphone Sensors (Accelerometer, Gyroscope), Python, Signal Processing Techniques</p>
+
+<ul>
+<li>Redesigned hardware-centric system into mobile solution</li>
+<li>Implemented sensor fusion</li>
+<li>Built timestamp alignment algorithms</li>
+</ul>
 </div>
 
 <div class="project-item" onclick="toggleProject('p2')">
 <i data-lucide="battery-charging"></i> EV Charger Interface & Technical Documentation
 </div>
+
 <div id="p2" class="project-content">
-<p><strong>Objective:</strong> Designing a structured technical manual...</p>
+<p><strong>Objective:</strong> Designing structured EV charging system documentation.</p>
+
+<ul>
+<li>Analyzed ESP32 + STM32 communication</li>
+<li>Documented system architecture</li>
+<li>Built interface framework</li>
+</ul>
 </div>
 
 <div class="project-item" onclick="toggleProject('p3')">
 <i data-lucide="bar-chart-3"></i> AI/ML Dashboard
 </div>
+
 <div id="p3" class="project-content">
-<p><strong>Objective:</strong> Developing a responsive dashboard...</p>
+<p><strong>Objective:</strong> Building ML visualization dashboard.</p>
+
+<ul>
+<li>Responsive UI</li>
+<li>REST API integration</li>
+<li>Data visualization focus</li>
+</ul>
 </div>
 
 </div>
@@ -100,8 +125,16 @@
 <div class="card">
 <button class="accordion"><i data-lucide="file-text"></i> Resume</button>
 <div class="panel">
+
 <p><strong>Degree:</strong> B.Tech in Computer Science</p>
 <p><strong>Institution:</strong> VIT Vellore</p>
+
+<ul>
+<li>DSA</li>
+<li>OOP</li>
+<li>C Programming</li>
+</ul>
+
 </div>
 </div>
 
@@ -109,7 +142,21 @@
 <div class="card">
 <button class="accordion"><i data-lucide="mail"></i> Contact</button>
 <div class="panel">
+
 <p>Email: avani.vasistha2025@vitvellore.ac.in</p>
+<p><a href="https://github.com/avanivasistha2025">GitHub</a></p>
+
+</div>
+</div>
+
+<!-- PERSONAL -->
+<div class="card">
+<button class="accordion"><i data-lucide="pen-line"></i> Personal Statement</button>
+<div class="panel">
+
+<p>I believe in learning by building. Each project is an opportunity to understand both how and why things work.</p>
+<p>I aim to grow as an engineer through consistent learning and real-world problem solving.</p>
+
 </div>
 </div>
 
@@ -124,8 +171,7 @@ panel.classList.toggle("open");
 });
 
 function toggleProject(id) {
-const el = document.getElementById(id);
-el.classList.toggle("open");
+document.getElementById(id).classList.toggle("open");
 }
 
 lucide.createIcons();
