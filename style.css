@@ -1,25 +1,154 @@
-/* SECTION IMAGES */
-.section-img {
-    width: 100%;
-    height: 160px;
-    object-fit: cover;
-    border-radius: 12px;
-    margin-bottom: 15px;
-    opacity: 0.85;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* PROJECT IMAGE */
-.project-img {
-    width: 100%;
-    height: 120px;
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 8px;
+html, body {
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
 }
 
-/* Improve project layout */
-.project-item {
+/* BACKGROUND */
+.bg {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at top left, #1e293b, #020617);
+    z-index: -2;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 20px;
+}
+
+/* NAV */
+.nav {
     display: flex;
-    flex-direction: column;
-    gap: 8px;
+    gap: 25px;
+    margin-bottom: 30px;
+}
+
+.nav a {
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.95rem;
+    transition: 0.3s;
+}
+
+.nav a:hover {
+    color: white;
+}
+
+/* CARD */
+.card {
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(14px);
+    border-radius: 18px;
+    padding: 26px;
+    margin-bottom: 26px;
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: 0.35s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border: 1px solid rgba(148,163,184,0.3);
+}
+
+/* HEADER */
+.header-card h1 {
+    color: white;
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+header p {
+    color: #94a3b8;
+    margin-top: 6px;
+}
+
+/* ACCORDION */
+.accordion {
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* PANEL */
+.panel {
+    display: none;
+    margin-top: 14px;
+}
+
+/* TEXT */
+p {
+    color: #cbd5f5;
+    margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+h3 {
+    color: white;
+    margin-top: 12px;
+    font-size: 1rem;
+}
+
+/* LIST */
+ul {
+    margin-left: 18px;
+}
+
+li {
+    color: #94a3b8;
+    margin-bottom: 4px;
+}
+
+/* PROJECT */
+.project-item {
+    background: rgba(59,130,246,0.08);
+    padding: 14px;
+    margin-top: 12px;
+    border-radius: 12px;
+    cursor: pointer;
+    color: white;
+    transition: 0.25s;
+}
+
+.project-item:hover {
+    background: rgba(59,130,246,0.18);
+    transform: scale(1.02);
+}
+
+.project-content {
+    display: none;
+    padding: 12px;
+    margin-top: 6px;
+    border-left: 2px solid #3b82f6;
+}
+
+/* LINKS */
+a {
+    color: #60a5fa;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* HIGHLIGHT CARD */
+.highlight-card {
+    border: 1px solid rgba(96,165,250,0.3);
 }

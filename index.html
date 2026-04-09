@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Avani Vasistha | Portfolio</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
 
     <link rel="stylesheet" href="style.css">
@@ -32,7 +32,6 @@
 
 <!-- ABOUT -->
 <div class="card">
-    <img src="https://images.unsplash.com/photo-1526378722484-bd91ca387e72" class="section-img">
     <button class="accordion"><i data-lucide="user"></i> About Me</button>
     <div class="panel">
         <p>I am an undergraduate engineering student with a growing interest in problem-solving, software development, and building practical systems that address real-world challenges. My academic journey has helped me develop a strong foundation in programming, data structures, and analytical thinking.</p>
@@ -42,7 +41,6 @@
 
 <!-- SKILLS -->
 <div class="card">
-    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475" class="section-img">
     <button class="accordion"><i data-lucide="cpu"></i> Skills</button>
     <div class="panel">
         <h3>Programming</h3>
@@ -61,21 +59,19 @@
 
 <!-- PROJECTS -->
 <div class="card">
-    <img src="https://images.unsplash.com/photo-1531297484001-80022131f5a1" class="section-img">
     <button class="accordion"><i data-lucide="folder"></i> Projects</button>
 
     <div class="panel">
 
         <div class="project-item" onclick="toggleProject('p1')">
-            <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c" class="project-img">
             <i data-lucide="activity"></i> Smart Sensor Synchronization System
         </div>
 
         <div id="p1" class="project-content">
+            <!-- unchanged -->
             <p><strong>Objective:</strong> Developing a software-based synchronization system that leverages smartphone sensors to align multi-source data points with high temporal accuracy.</p>
             <p><strong>Role:</strong> Lead Developer / Researcher</p>
             <p><strong>Technologies Used:</strong> Smartphone Sensors (Accelerometer, Gyroscope), Python, Signal Processing Techniques</p>
-
             <p><strong>Key Contributions:</strong></p>
             <ul>
                 <li>Redesigned a hardware-centric concept into a mobile-first solution</li>
@@ -83,21 +79,19 @@
                 <li>Developed timestamp alignment algorithms</li>
                 <li>Validated system using real-world datasets</li>
             </ul>
-
             <p><strong>Outcome:</strong> Built a scalable and cost-effective solution.</p>
             <p><strong>Learning Outcome:</strong> Gained practical exposure to sensor data processing and system design.</p>
             <p><strong>Project Link:</strong> <a href="#">GitHub Repo</a></p>
         </div>
 
         <div class="project-item" onclick="toggleProject('p2')">
-            <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc" class="project-img">
             <i data-lucide="battery-charging"></i> EV Charger Interface & Technical Documentation
         </div>
 
         <div id="p2" class="project-content">
+            <!-- unchanged -->
             <p><strong>Objective:</strong> Designing a structured technical manual and interface framework for an Electric Vehicle (EV) charging system involving dual-controller architecture.</p>
             <p><strong>Technologies Used:</strong> Designing a structured technical manual and interface framework for an Electric Vehicle (EV) charging system involving dual-controller architecture.</p>
-
             <p><strong>Key Contributions:</strong></p>
             <ul>
                 <li>Analyzed communication flow between ESP32 and STM32 controllers in the charging system</li>
@@ -105,21 +99,19 @@
                 <li>Documented system architecture, including power flow, control signals, and fail-safe mechanisms</li>
                 <li>Developed a user-oriented interface outline for monitoring charging status and system diagnostics</li>
             </ul>
-
             <p><strong>Outcome:</strong> Produced a comprehensive integration manual that improves system understanding, reduces onboarding time for new developers, and ensures reliable implementation of the EV charging setup.</p>
             <p><strong>Learning Outcome:</strong> Strengthened technical documentation and embedded systems understanding.</p>
             <p><strong>Project Link:</strong> <a href="#">GitHub Repo</a></p>
         </div>
 
         <div class="project-item" onclick="toggleProject('p3')">
-            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71" class="project-img">
             <i data-lucide="bar-chart-3"></i> AI/ML Dashboard
         </div>
 
         <div id="p3" class="project-content">
+            <!-- unchanged -->
             <p><strong>Objective:</strong> Developing a responsive and user-friendly dashboard to present machine learning outputs in an interpretable and accessible format.</p>
             <p><strong>Technologies Used:</strong> React, JavaScript, REST APIs</p>
-
             <p><strong>Key Contributions:</strong></p>
             <ul>
                 <li>Developing a responsive and user-friendly dashboard to present machine learning outputs in an interpretable and accessible format.</li>
@@ -127,7 +119,6 @@
                 <li>Ensured responsive design for usability across devices</li>
                 <li>Focused on clean data visualization to simplify complex outputs for non-technical users</li>
             </ul>
-
             <p><strong>Outcome:</strong> Delivered a functional front-end module that enhances usability of AI/ML systems by translating technical outputs into clear, visual insights for end-users.</p>
             <p><strong>Learning Outcome:</strong> Improved frontend development and API integration skills.</p>
             <p><strong>Project Link:</strong> <a href="#">GitHub Repo</a></p>
@@ -138,26 +129,22 @@
 
 <!-- RESUME -->
 <div class="card">
-    <img src="https://images.unsplash.com/photo-1581091215367-59ab6b1c7f0c" class="section-img">
     <button class="accordion"><i data-lucide="file-text"></i> Resume</button>
     <div class="panel">
         <p><strong>Degree:</strong> B.Tech in Computer Science</p>
         <p><strong>Institution:</strong> VIT Vellore</p>
-
         <p><strong>Relevant Coursework:</strong></p>
         <ul>
             <li>Data Structures & Algorithms</li>
             <li>Object-Oriented Programming</li>
             <li>Programming in C</li>
         </ul>
-
         <p><a href="#">Download Full Resume (PDF)</a></p>
     </div>
 </div>
 
 <!-- CONTACT -->
 <div class="card">
-    <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216" class="section-img">
     <button class="accordion"><i data-lucide="mail"></i> Contact</button>
     <div class="panel">
         <p>Email: avani.vasistha2025@vitvellore.ac.in</p>
@@ -168,7 +155,6 @@
 
 <!-- PERSONAL -->
 <div class="card highlight-card">
-    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085" class="section-img">
     <button class="accordion"><i data-lucide="pen-line"></i> Personal Statement</button>
     <div class="panel">
         <p>I believe in learning by building. Each project I take up is an opportunity to understand not just how something works, but why it works that way. I value clarity, consistency, and continuous improvement in both technical and personal development.</p>
