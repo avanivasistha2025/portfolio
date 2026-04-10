@@ -143,10 +143,13 @@ p {
 }
 
 /* ================= ABOUT ================= */
-.about-content {
-    display: flex;
-    align-items: center;
-    gap: 20px;
+.about-content p {
+    color: #ffffff !important;
+    font-weight: 500;
+    line-height: 1.8;
+    text-shadow: 
+        0 2px 8px rgba(0,0,0,0.8),
+        0 0 12px rgba(255,255,255,0.25);
 }
 
 .about-text {
