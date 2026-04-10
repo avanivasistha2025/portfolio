@@ -32,10 +32,9 @@ body {
 
 /* ================= LAYOUT ================= */
 .container {
-    width: 90%;
-    max-width: 1100px;
-    margin: auto;
-    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* ================= NAVBAR ================= */
@@ -214,7 +213,7 @@ p {
 }
 
 .panel-inner {
-    padding: 14px 0 18px;
+    padding: 20px 25px;
 }
 
 .panel-inner p {
@@ -224,6 +223,21 @@ p {
 .panel-inner ul {
     margin-left: 18px;
     margin-bottom: 10px;
+}
+/* Links inside all tabs (About, Projects, Resume, etc.) */
+.panel-inner a {
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: 500;
+    text-shadow: 0 0 6px rgba(59,130,246,0.6);
+}
+
+.panel-inner a:hover {
+    color: #93c5fd;
+    text-shadow: 
+        0 0 8px rgba(59,130,246,0.9),
+        0 0 16px rgba(59,130,246,0.7),
+        0 0 24px rgba(59,130,246,0.5);
 }
 
 /* ================= SKILLS ================= */
