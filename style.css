@@ -76,8 +76,11 @@ body {
 }
 
 .header-subtext {
-    color: #ffffff;
-    font-weight: 400; /* normal (recommended for readability) */
+    color: #ffffff !important;
+    background: none !important;
+    font-weight: 400;
+    opacity: 0.9;
+    text-shadow: 0 2px 8px rgba(0,0,0,0.6);
 }
 /* ================= CARD ================= */
 .card {
