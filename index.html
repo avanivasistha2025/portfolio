@@ -1,100 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Avani Vasistha | Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avani Vasistha | Portfolio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-<script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
 
-<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
 <div class="bg"></div>
 
-<div class="container fade-in">
+<div class="container">
 
 <nav class="nav">
-<a href="#">About</a>
-<a href="#">Skills</a>
-<a href="#">Projects</a>
-<a href="#">Resume</a>
-<a href="#">Contact</a>
+    <a href="#">About</a>
+    <a href="#">Skills</a>
+    <a href="#">Projects</a>
+    <a href="#">Resume</a>
+    <a href="#">Contact</a>
 </nav>
 
 <header class="card header-card">
-<h1>Avani Vasistha</h1>
-<p>Engineering Student | Developer | Problem Solver</p>
-<div class="hero-line"></div>
+    <h1>Avani Vasistha</h1>
+    <p>Engineering Student | Developer | Problem Solver</p>
 </header>
 
-<!-- ================= ABOUT ================= -->
+<!-- ABOUT -->
 <div class="card">
-<button class="accordion"><i data-lucide="user"></i> About Me</button>
-
-<div class="panel">
-<div class="about-content">
-
-<!-- ⚠️ KEEP YOUR EXACT IMAGE + TEXT HERE (UNCHANGED) -->
-<img src="YOUR EXISTING BASE64 IMAGE HERE" />
-
-<!-- KEEP ALL YOUR TEXT CONTENT EXACTLY -->
-
-</div>
-</div>
+    <button class="accordion"><i data-lucide="user"></i> About Me</button>
+    <div class="panel">
+        <p>I am an undergraduate engineering student with a growing interest in problem-solving, software development, and building practical systems that address real-world challenges. My academic journey has helped me develop a strong foundation in programming, data structures, and analytical thinking.</p>
+        <p>I am particularly interested in areas such as algorithm design, computer vision, and system-level problem solving. I approach learning with curiosity and consistency, and I aim to build solutions that are both efficient and user-focused.</p>
+    </div>
 </div>
 
-<!-- ================= KEEP ALL YOUR OTHER SECTIONS EXACTLY SAME ================= -->
+<!-- SKILLS -->
+<div class="card">
+    <button class="accordion"><i data-lucide="cpu"></i> Skills</button>
+    <div class="panel">
+        <h3>Programming</h3>
+        <ul><li>C, Python, Java</li></ul>
+
+        <h3>Core Concepts</h3>
+        <ul>
+            <li>Data Structures & Algorithms</li>
+            <li>Dynamic Programming</li>
+        </ul>
+
+        <h3>Tools & Technologies</h3>
+        <ul><li>Git, VS Code</li></ul>
+    </div>
+</div>
+
+<!-- PROJECTS -->
+<div class="card">
+    <button class="accordion"><i data-lucide="folder"></i> Projects</button>
+
+    <div class="panel">
+
+        <div class="project-item" onclick="toggleProject('p1')">
+            <i data-lucide="activity"></i> Smart Sensor Synchronization System
+        </div>
+
+        <div id="p1" class="project-content">
+            <p><strong>Objective:</strong> Developing a software-based synchronization system that leverages smartphone sensors to align multi-source data points with high temporal accuracy.</p>
+            <p><strong>Role:</strong> Lead Developer / Researcher</p>
+            <p><strong>Technologies Used:</strong> Smartphone Sensors (Accelerometer, Gyroscope), Python, Signal Processing Techniques</p>
+
+            <p><strong>Key Contributions:</strong></p>
+            <ul>
+                <li>Redesigned a hardware-centric concept into a mobile-first solution</li>
+                <li>Implemented sensor fusion techniques</li>
+                <li>Developed timestamp alignment algorithms</li>
+                <li>Validated system using real-world datasets</li>
+            </ul>
+
+            <p><strong>Outcome:</strong> Built a scalable and cost-effective solution.</p>
+            <p><strong>Learning Outcome:</strong> Gained practical exposure to sensor data processing and system design.</p>
+            <p><strong>Project Link:</strong> <a href="#">GitHub Repo</a></p>
+        </div>
+
+        <div class="project-item" onclick="toggleProject('p2')">
+            <i data-lucide="battery-charging"></i> EV Charger Interface & Technical Documentation
+        </div>
+
+        <div id="p2" class="project-content">
+            <p><strong>Objective:</strong> Designing a structured technical manual and interface framework for an Electric Vehicle (EV) charging system involving dual-controller architecture.</p>
+            <p><strong>Technologies Used:</strong> Designing a structured technical manual and interface framework for an Electric Vehicle (EV) charging system involving dual-controller architecture.</p>
+
+            <p><strong>Key Contributions:</strong></p>
+            <ul>
+                <li>Analyzed communication flow between ESP32 and STM32 controllers in the charging system</li>
+                <li>Analyzed communication flow between ESP32 and STM32 controllers in the charging system</li>
+                <li>Documented system architecture, including power flow, control signals, and fail-safe mechanisms</li>
+                <li>Developed a user-oriented interface outline for monitoring charging status and system diagnostics</li>
+            </ul>
+
+            <p><strong>Outcome:</strong> Produced a comprehensive integration manual that improves system understanding, reduces onboarding time for new developers, and ensures reliable implementation of the EV charging setup.</p>
+            <p><strong>Learning Outcome:</strong> Strengthened technical documentation and embedded systems understanding.</p>
+            <p><strong>Project Link:</strong> <a href="#">GitHub Repo</a></p>
+        </div>
+
+        <div class="project-item" onclick="toggleProject('p3')">
+            <i data-lucide="bar-chart-3"></i> AI/ML Dashboard
+        </div>
+
+        <div id="p3" class="project-content">
+            <p><strong>Objective:</strong> Developing a responsive and user-friendly dashboard to present machine learning outputs in an interpretable and accessible format.</p>
+            <p><strong>Technologies Used:</strong> React, JavaScript, REST APIs</p>
+
+            <p><strong>Key Contributions:</strong></p>
+            <ul>
+                <li>Developing a responsive and user-friendly dashboard to present machine learning outputs in an interpretable and accessible format.</li>
+                <li>Integrated REST APIs to fetch and dynamically update data from backend ML models</li>
+                <li>Ensured responsive design for usability across devices</li>
+                <li>Focused on clean data visualization to simplify complex outputs for non-technical users</li>
+            </ul>
+
+            <p><strong>Outcome:</strong> Delivered a functional front-end module that enhances usability of AI/ML systems by translating technical outputs into clear, visual insights for end-users.</p>
+            <p><strong>Learning Outcome:</strong> Improved frontend development and API integration skills.</p>
+            <p><strong>Project Link:</strong> <a href="#">GitHub Repo</a></p>
+        </div>
+
+    </div>
+</div>
+
+<!-- RESUME -->
+<div class="card">
+    <button class="accordion"><i data-lucide="file-text"></i> Resume</button>
+    <div class="panel">
+        <p><strong>Degree:</strong> B.Tech in Computer Science</p>
+        <p><strong>Institution:</strong> VIT Vellore</p>
+
+        <p><strong>Relevant Coursework:</strong></p>
+        <ul>
+            <li>Data Structures & Algorithms</li>
+            <li>Object-Oriented Programming</li>
+            <li>Programming in C</li>
+        </ul>
+
+        <p><a href="#">Download Full Resume (PDF)</a></p>
+    </div>
+</div>
+
+<!-- CONTACT -->
+<div class="card">
+    <button class="accordion"><i data-lucide="mail"></i> Contact</button>
+    <div class="panel">
+        <p>Email: avani.vasistha2025@vitvellore.ac.in</p>
+        <p><a href="https://github.com/avanivasistha2025">GitHub</a></p>
+        <p><a href="https://linkedin.com">LinkedIn</a></p>
+    </div>
+</div>
+
+<!-- PERSONAL -->
+<div class="card highlight-card">
+    <button class="accordion"><i data-lucide="pen-line"></i> Personal Statement</button>
+    <div class="panel">
+        <p>I believe in learning by building. Each project I take up is an opportunity to understand not just how something works, but why it works that way. I value clarity, consistency, and continuous improvement in both technical and personal development.</p>
+        <p>I am currently focused on strengthening my fundamentals while gradually exploring advanced domains like machine learning and system design. I am open to collaborations, internships, and opportunities that allow me to grow as an engineer.</p>
+    </div>
+</div>
 
 </div>
 
-<!-- ✅ FINAL WORKING SCRIPT -->
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-
-    const accordions = document.querySelectorAll(".accordion");
-
-    accordions.forEach(button => {
-        button.addEventListener("click", function () {
-
-            this.classList.toggle("active");
-
-            const panel = this.nextElementSibling;
-
-            if (!panel) return;
-
-            if (panel.style.display === "block") {
-                panel.style.display = "none";
-            } else {
-                panel.style.display = "block";
-            }
-
-        });
+document.querySelectorAll(".accordion").forEach(btn => {
+    btn.addEventListener("click", function () {
+        const panel = this.nextElementSibling;
+        panel.style.display = panel.style.display === "block" ? "none" : "block";
     });
-
-    /* ICONS SAFE INIT */
-    function loadIcons() {
-        if (window.lucide) {
-            lucide.createIcons();
-        }
-    }
-
-    loadIcons();
-
-    /* retry in case CDN delay */
-    let tries = 0;
-    const interval = setInterval(() => {
-        if (window.lucide || tries > 10) {
-            loadIcons();
-            clearInterval(interval);
-        }
-        tries++;
-    }, 100);
-
 });
+
+function toggleProject(id) {
+    const el = document.getElementById(id);
+    el.style.display = el.style.display === "block" ? "none" : "block";
+}
+
+lucide.createIcons();
 </script>
 
 </body>
