@@ -118,7 +118,15 @@ p {
     color: #9aa0ff;
     letter-spacing: 1px;
 }
-
+/* Personal Statement text */
+.highlight-card .panel-inner p {
+    color: #ffffff;
+    font-weight: 500;
+    line-height: 1.7;
+    text-shadow: 
+        0 2px 6px rgba(0,0,0,0.6),
+        0 0 10px rgba(255,255,255,0.15);
+}
 /* ================= TEXT EFFECTS ================= */
 .highlight {
     color: #7c8cff;
