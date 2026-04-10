@@ -163,6 +163,13 @@ p {
 button:hover {
     color: #7c8cff;
 }
+.project-content {
+    padding-top: 10px;
+}
+
+.project-content p {
+    margin-bottom: 10px;
+}
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 768px) {
