@@ -63,6 +63,12 @@ body {
 .header-card {
     text-align: center;
 }
+.header-card h1 {
+    color: #ffffff;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-shadow: 0 4px 12px rgba(0,0,0,0.6);
+}
 
 .header-content {
     max-width: 600px;
