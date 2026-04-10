@@ -29,22 +29,39 @@ html, body {
 }
 
 /* ================= NAVBAR ================= */
-.nav {
+.nav-inner {
     display: flex;
     justify-content: center;
+    align-items: center;
     gap: 30px;
-    margin-bottom: 40px;
 }
 
 .nav a {
-    text-decoration: none;
+    display: flex;
+    align-items: center;
     color: #cfcfcf;
+    text-decoration: none;
     font-size: 0.9rem;
     transition: 0.3s;
 }
 
 .nav a:hover {
     color: #7c8cff;
+}
+
+/* ================= HEADER ================= */
+.header-card {
+    text-align: center;
+}
+
+.header-content {
+    max-width: 600px;
+    margin: auto;
+}
+
+.header-subtext {
+    margin-top: 10px;
+    line-height: 1.7;
 }
 
 /* ================= CARD ================= */
@@ -55,11 +72,6 @@ html, body {
     padding: 25px;
     margin-bottom: 20px;
     backdrop-filter: blur(10px);
-}
-
-/* ================= HEADER ================= */
-.header-card {
-    text-align: center;
 }
 
 /* ================= TYPOGRAPHY ================= */
@@ -85,10 +97,6 @@ p {
     line-height: 1.6;
 }
 
-.header-card h1 {
-    font-size: 3rem;
-}
-
 .header-card p {
     font-size: 1.1rem;
     color: #9aa0ff;
@@ -103,24 +111,22 @@ p {
 
 .gradient-text {
     background: linear-gradient(90deg, #7c8cff, #00d4ff);
-
-    /* Standard property (fixes warning) */
     background-clip: text;
-
-    /* Required for Chrome/Safari */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
-    /* Fallback for other browsers */
     color: #7c8cff;
-
     display: inline-block;
 }
+
 /* ================= ABOUT ================= */
 .about-content {
     display: flex;
-    gap: 20px;
     align-items: center;
+    gap: 20px;
+}
+
+.about-text {
+    flex: 1;
 }
 
 .about-content img {
@@ -128,11 +134,8 @@ p {
     height: 120px;
     border-radius: 50%;
     object-fit: cover;
+    flex-shrink: 0;
     border: 2px solid #7c8cff;
-}
-
-.about-content p {
-    margin-bottom: 12px;
 }
 
 /* ================= ACCORDION ================= */
@@ -157,32 +160,33 @@ p {
 
     border-bottom: 1px solid rgba(255,255,255,0.08);
 }
+
 .accordion i {
     width: 18px;
     height: 18px;
     stroke-width: 2;
     flex-shrink: 0;
 }
-.accordion.active {
-    color: #7c8cff;
-}
+
 .accordion span {
     flex: 1;
 }
+
+.accordion.active {
+    color: #7c8cff;
+}
+
 .card .accordion:first-child {
     margin-top: 5px;
 }
+
+/* ================= PANELS ================= */
 .panel {
     max-height: 0;
     overflow: hidden;
-
-    transition: max-height 0.4s ease, padding 0.3s ease;
-
-    padding: 0 5px;
+    transition: max-height 0.4s ease;
 }
-.panel.open {
-    padding: 12px 5px 16px;
-}
+
 .panel-inner {
     padding: 14px 0 18px;
 }
@@ -196,16 +200,64 @@ p {
     margin-bottom: 10px;
 }
 
+/* ================= SKILLS ================= */
+.skills-group {
+    margin-bottom: 14px;
+}
+
+.skills-group h3 {
+    margin-bottom: 6px;
+}
+
+.skills-group ul {
+    margin-left: 18px;
+}
+
+.skills-group li {
+    margin-bottom: 4px;
+}
+
+/* ================= PROJECTS ================= */
+.project-content p {
+    margin-bottom: 10px;
+}
+
+.project-content ul {
+    margin-left: 18px;
+    margin-bottom: 10px;
+}
+
+.project-content li {
+    margin-bottom: 5px;
+}
+
+/* ================= RESUME ================= */
+.resume-content p {
+    margin-bottom: 10px;
+}
+
+.resume-content ul {
+    margin-left: 18px;
+    margin-bottom: 10px;
+}
+
+.resume-content li {
+    margin-bottom: 5px;
+}
+
+/* ================= CONTACT ================= */
+.contact-content p {
+    margin-bottom: 10px;
+}
+
+/* ================= PERSONAL ================= */
+.personal-content p {
+    margin-bottom: 10px;
+}
+
 /* ================= BUTTON HOVER ================= */
 button:hover {
     color: #7c8cff;
-}
-.project-content {
-    padding-top: 10px;
-}
-
-.project-content p {
-    margin-bottom: 10px;
 }
 
 /* ================= RESPONSIVE ================= */
