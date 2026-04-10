@@ -168,25 +168,44 @@
 <script>
 document.addEventListener("DOMContentLoaded", function () {
 
-    /* ================= ACCORDION ================= */
-    document.querySelectorAll(".accordion").forEach(button => {
-        button.addEventListener("click", function () {
-            this.classList.toggle("active");
+    /* SAFE ACCORDION INIT */
+    function initAccordion() {
+        const accordions = document.querySelectorAll(".accordion");
 
-            const panel = this.nextElementSibling;
+        accordions.forEach(button => {
+            button.addEventListener("click", function () {
+                this.classList.toggle("active");
 
-            if (panel.style.maxHeight) {
-                panel.style.maxHeight = null;
-            } else {
-                panel.style.maxHeight = panel.scrollHeight + "px";
-            }
+                const panel = this.nextElementSibling;
+
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
         });
-    });
-
-    /* ================= LUCIDE ICONS ================= */
-    if (window.lucide) {
-        lucide.createIcons();
     }
+
+    /* SAFE ICON INIT */
+    function initIcons() {
+        if (window.lucide) {
+            lucide.createIcons();
+        }
+    }
+
+    /* RUN BOTH */
+    initAccordion();
+
+    /* Retry icons (important for GitHub CDN delay) */
+    let tries = 0;
+    const iconInterval = setInterval(() => {
+        if (window.lucide || tries > 10) {
+            initIcons();
+            clearInterval(iconInterval);
+        }
+        tries++;
+    }, 100);
 
 });
 </script>
