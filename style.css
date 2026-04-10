@@ -138,25 +138,62 @@ p {
 /* ================= ACCORDION ================= */
 .accordion {
     width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
     background: none;
     border: none;
     outline: none;
+
     color: #ffffff;
     text-align: left;
     font-size: 1rem;
     cursor: pointer;
-    padding: 10px 0;
+
+    padding: 14px 0;
     font-family: 'Poppins', sans-serif;
     font-weight: 500;
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+.accordion i {
+    width: 18px;
+    height: 18px;
+    stroke-width: 2;
+    flex-shrink: 0;
 }
 .accordion.active {
     color: #7c8cff;
 }
-
+.accordion span {
+    flex: 1;
+}
+.card .accordion:first-child {
+    margin-top: 5px;
+}
 .panel {
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.4s ease;
+
+    transition: max-height 0.4s ease, padding 0.3s ease;
+
+    padding: 0 5px;
+}
+.panel.open {
+    padding: 12px 5px 16px;
+}
+.panel-inner {
+    padding: 14px 0 18px;
+}
+
+.panel-inner p {
+    margin-bottom: 10px;
+}
+
+.panel-inner ul {
+    margin-left: 18px;
+    margin-bottom: 10px;
 }
 
 /* ================= BUTTON HOVER ================= */
