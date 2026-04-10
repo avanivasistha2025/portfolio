@@ -165,36 +165,30 @@
 </div>
 
 </div>
-
 <script>
-/* accordion */
-document.querySelectorAll(".accordion").forEach(btn => {
-btn.addEventListener("click", function () {
-this.nextElementSibling.classList.toggle("open");
-});
-});
+document.addEventListener("DOMContentLoaded", function () {
 
-/* project toggle */
-function toggleProject(id) {
-document.getElementById(id).classList.toggle("open");
-}
+    /* ================= ACCORDION ================= */
+    document.querySelectorAll(".accordion").forEach(button => {
+        button.addEventListener("click", function () {
+            this.classList.toggle("active");
 
-/* scroll animation */
-const observer = new IntersectionObserver(entries => {
-entries.forEach(entry => {
-if (entry.isIntersecting) {
-entry.target.classList.add("show");
-}
-});
-});
+            const panel = this.nextElementSibling;
 
-document.querySelectorAll(".card").forEach(el => {
-el.classList.add("hidden");
-observer.observe(el);
-});
+            if (panel.style.maxHeight) {
+                panel.style.maxHeight = null;
+            } else {
+                panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+        });
+    });
 
-lucide.createIcons();
+    /* ================= LUCIDE ICONS ================= */
+    if (window.lucide) {
+        lucide.createIcons();
+    }
+
+});
 </script>
-
 </body>
 </html>
